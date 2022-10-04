@@ -15,8 +15,6 @@ RUN apk --update add --virtual build-dependencies python3 build-base && \
 	npm_config_user=root npm install -g n8n@${N8N_VERSION} axios qs moment && \
 	apk del build-dependencies
 
-SET NODE_FUNCTION_ALLOW_EXTERNAL=axios,qs,moment
-
 # Specifying work directory
 WORKDIR /data
 
